@@ -1,0 +1,8 @@
+Seq2seqBaseline(
+  (embedding): Embedding(36, 6)
+  (encoder_gru): GRU(6, 256, num_layers=3, dropout=0.1, bidirectional=True)
+  (decoder_gru): GRU(6, 256, num_layers=3, dropout=0.1)
+  (decoder_linear): Linear(in_features=256, out_features=36, bias=True)
+)
+
+total trainable params: 3772668
