@@ -1,3 +1,12 @@
+Given a single variable equation in a compact form, the task is to expand it to a more standardized form (e.g. `ax**2 + bx + c`). The dataset contains a list of such expressions, some examples of the same are as follows: 
+```
+(7-3*z)*(-5*z-9)=15*z**2-8*z-63
+-9*s**2=-9*s**2
+(2-2*n)*(n-1)=-2*n**2+4*n-2
+-2*k*(5*k-9)=-10*k**2+18*k
+(3*cos(c)-19)*(7*cos(c)+13)=21*cos(c)**2-94*cos(c)-247
+```
+
 The task is similar to a machine translation task. Machine translation tasks have been extensively studied and solved using a seq-2-seq models using the encoder-decoder architecture. So, it makes sense to try out some seq-2-seq models in order to solve it. 
 Following were the results obtained from a GRU model using the encoder-decoder structure. The model was trained on google colab using a learning rate of `0.001` with a batch size of 1536 for 10 epochs. 
 
