@@ -1,3 +1,5 @@
+# Polynomial expansion using GRUs
+
 Given a single variable equation in a compact form, the task is to expand it to a more standardized form (e.g. `ax**2 + bx + c`). The dataset contains a list of such expressions, some examples of the same are as follows: 
 ```
 (7-3*z)*(-5*z-9)=15*z**2-8*z-63
@@ -7,13 +9,13 @@ Given a single variable equation in a compact form, the task is to expand it to 
 (3*cos(c)-19)*(7*cos(c)+13)=21*cos(c)**2-94*cos(c)-247
 ```
 
-The task is similar to a machine translation task. Machine translation tasks have been extensively studied and solved using a seq-2-seq models using the encoder-decoder architecture. So, it makes sense to try out some seq-2-seq models in order to solve it. 
-Following were the results obtained from a GRU model using the encoder-decoder structure. The model was trained on google colab using a learning rate of `0.001` with a batch size of 1536 for 10 epochs. 
+The task is similar to a machine translation task. Machine translation tasks have been extensively studied and solved using seq-2-seq models with an encoder-decoder architecture. Following were the results obtained using GRUs in both encoder and decoder: 
 
-1. GRU Encoder-Decoder: 0.7414
+- Accuracy for GRU Encoder-Decoder: `0.7414`
 
-More details regarding the model can be found in the `network.txt` file. 
+The model was trained on google colab using a learning rate of `0.001` with a batch size of `1536` for `10` epochs. More details regarding the model can be found in the `network.txt` file. 
 
+## Replicating the results 
 In order to run the code, Please install the dependencies present in the `requirements.txt` file first. The run the following files: 
 
 ```bash 
